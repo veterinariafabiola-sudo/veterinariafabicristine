@@ -36,6 +36,15 @@ body{background:radial-gradient(ellipse at 6% 9%,#e7fbf7 0,transparent 31%),radi
 @keyframes gentleRise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:900px){.nav-links{background:#ffffffeb;backdrop-filter:blur(25px);border-radius:0 0 24px 24px}.hero-grid{min-height:auto}.hero:before{width:160px;height:160px}.hero:after{width:100px;height:100px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+
+/* Cursor-following luminous orb — pointer devices only */
+.cursor-aura{position:fixed;left:0;top:0;width:260px;height:260px;border-radius:50%;pointer-events:none;z-index:8;opacity:0;transform:translate3d(-500px,-500px,0);background:radial-gradient(circle at 43% 40%,#ffffffa8 0%,#b8f5e777 22%,#a8d9f04a 44%,#e6c7ef32 60%,transparent 73%);filter:blur(9px);mix-blend-mode:multiply;will-change:transform,opacity;transition:opacity .45s ease}
+.cursor-aura.is-visible{opacity:.8}
+.cursor-aura.is-active{opacity:1}
+.cursor-spark{position:fixed;left:0;top:0;width:14px;height:14px;border:1px solid #ffffffdd;border-radius:50%;pointer-events:none;z-index:9;opacity:0;transform:translate3d(-500px,-500px,0);background:radial-gradient(circle at 35% 30%,#fff,#b8eee3 56%,#77c4bc);box-shadow:0 0 14px #85d7ccaa;will-change:transform,opacity;transition:opacity .3s ease}
+.cursor-spark.is-visible{opacity:.9}
+@media(hover:none),(pointer:coarse){.cursor-aura,.cursor-spark{display:none!important}}
+@media(prefers-reduced-motion:reduce){.cursor-aura,.cursor-spark{display:none!important}}
 </style></head>
 <body><a class="skip" href="#conteudo">Pular para conteúdo</a><header class="site-header"><nav class="container nav" aria-label="Menu principal"><a class="brand" href="#inicio"><span class="brand-mark">✳</span><span>Dra. Fabi Cristine<small>Medicina Veterinária</small></span></a><button class="mobile-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button><div class="nav-links" id="nav-links"><a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#cuidado">Nossa abordagem</a><a href="#faq">Dúvidas</a><a class="btn" href="#agendar">Agendar consulta ↗</a></div></nav></header>
 <main id="conteudo"><section class="hero" id="inicio"><div class="container hero-grid"><div><div class="eyebrow">Medicina veterinária com presença e propósito</div><h1>Cuidar é um gesto de <em>amor.</em></h1><p>Uma medicina veterinária atenta à história, à rotina e ao bem-estar de cada animal. Acolhimento para você, cuidado individualizado para seu melhor amigo.</p><div class="hero-actions"><a class="btn" href="#agendar">Quero agendar uma consulta ↗</a><a class="btn outline" href="#servicos">Conhecer os serviços</a></div></div><div class="hero-visual" aria-label="Ilustração delicada de um cão e um gato"><div class="hero-blob"></div><svg viewBox="0 0 520 530" role="img" aria-label="Cão e gato juntos em tons suaves"><ellipse cx="265" cy="463" rx="193" ry="25" fill="#4b806c" opacity=".17"/><path d="M115 440 Q60 338 110 226 Q151 145 237 179 Q297 210 281 316 L271 447Z" fill="#d8aaa7"/><path d="M136 250 Q71 159 105 106 Q169 94 204 164 Q276 126 309 190 Q336 247 288 314 L272 428 Q205 458 127 424Z" fill="#d6a17b"/><path d="M118 201 Q80 135 103 103 Q150 103 184 166" fill="#a97959"/><path d="M204 174 Q280 127 303 174 Q323 221 288 253" fill="#a97959"/><ellipse cx="202" cy="260" rx="86" ry="90" fill="#f2dfcc"/><ellipse cx="167" cy="243" rx="9" ry="11" fill="#233d35"/><ellipse cx="240" cy="243" rx="9" ry="11" fill="#233d35"/><path d="M191 280 Q203 268 215 280 Q204 295 191 280" fill="#7c584b"/><path d="M204 290 Q185 311 172 295 M204 290 Q225 311 238 295" fill="none" stroke="#7c584b" stroke-width="5" stroke-linecap="round"/><path d="M285 434 Q265 337 306 289 L297 209 L336 250 L381 205 L391 287 Q440 330 423 438Z" fill="#f5f0e5"/><path d="M294 285 L299 208 L339 252 L381 207 L389 287" fill="#f5f0e5" stroke="#d3c6b6" stroke-width="5"/><path d="M309 252 L307 228 L325 252 M361 253 L379 226 L380 259" fill="#d8aaa7"/><ellipse cx="343" cy="334" rx="65" ry="67" fill="#f5f0e5"/><ellipse cx="317" cy="322" rx="7" ry="10" fill="#315247"/><ellipse cx="366" cy="322" rx="7" ry="10" fill="#315247"/><path d="M333 344 L353 344 L343 355Z" fill="#d8aaa7"/><path d="M343 356 Q333 368 325 360 M343 356 Q354 368 363 360" fill="none" stroke="#678075" stroke-width="3" stroke-linecap="round"/><path d="M300 350 L259 344 M302 359 L257 366 M386 350 L425 344 M384 359 L426 368" stroke="#678075" stroke-width="2.5" stroke-linecap="round"/><path d="M179 430 Q182 470 166 472 M231 430 Q230 471 248 471 M321 425 Q315 469 327 472 M378 427 Q390 469 377 473" fill="none" stroke="#a97959" stroke-width="15" stroke-linecap="round"/><path d="M406 410 Q472 392 446 349" fill="none" stroke="#f5f0e5" stroke-width="17" stroke-linecap="round"/></svg><div class="floating-note"><span>♡</span> Ciência, escuta e carinho</div></div></div></section>
@@ -70,5 +79,33 @@ const targets=document.querySelectorAll('.section-heading,.service,.feature,.ste
 if(!('IntersectionObserver' in window)){return;}
 const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}})},{threshold:.09,rootMargin:'0px 0px -25px 0px'});
 targets.forEach((el,i)=>{el.classList.add('reveal');el.style.transitionDelay=((i%3)*90)+'ms';observer.observe(el)});
+})();
+</script><script>
+/* Smooth cursor follower with no layout thrashing; respects motion preferences. */
+(function(){
+if(!window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)').matches)return;
+const aura=document.createElement('div'),spark=document.createElement('div');
+aura.className='cursor-aura';spark.className='cursor-spark';
+aura.setAttribute('aria-hidden','true');spark.setAttribute('aria-hidden','true');
+document.body.append(aura,spark);
+let x=-500,y=-500,ax=-500,ay=-500,sx=-500,sy=-500,active=false,frame=0;
+const render=()=>{
+if(!active){frame=0;return;}
+ax+=(x-ax)*.115;ay+=(y-ay)*.115;
+sx+=(x-sx)*.32;sy+=(y-sy)*.32;
+aura.style.transform='translate3d('+(ax-130)+'px,'+(ay-130)+'px,0)';
+spark.style.transform='translate3d('+(sx-7)+'px,'+(sy-7)+'px,0)';
+frame=requestAnimationFrame(render);
+};
+document.addEventListener('pointermove',e=>{
+if(e.pointerType!=='mouse')return;
+x=e.clientX;y=e.clientY;
+if(!active){active=true;ax=x;ay=y;sx=x;sy=y;aura.classList.add('is-visible');spark.classList.add('is-visible');}
+if(!frame)frame=requestAnimationFrame(render);
+},{passive:true});
+document.addEventListener('pointerover',e=>{if(e.target.closest('a,button,input,textarea,summary'))aura.classList.add('is-active')});
+document.addEventListener('pointerout',e=>{if(e.target.closest('a,button,input,textarea,summary'))aura.classList.remove('is-active')});
+document.addEventListener('pointerleave',()=>{active=false;aura.classList.remove('is-visible');spark.classList.remove('is-visible');cancelAnimationFrame(frame);frame=0});
+window.addEventListener('blur',()=>{active=false;aura.classList.remove('is-visible');spark.classList.remove('is-visible');cancelAnimationFrame(frame);frame=0});
 })();
 </script></body></html>
